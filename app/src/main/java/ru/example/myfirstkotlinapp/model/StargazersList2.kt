@@ -6,7 +6,6 @@ import java.util.*
 class StargazersList2 {
 
        val user: Any? = null
-
         val starred_at: Date? = null
 
 

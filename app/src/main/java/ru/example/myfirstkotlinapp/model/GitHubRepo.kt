@@ -11,12 +11,5 @@ class GitHubRepo {
     val full_name: String? = null
     }
 
-//class StargazersList {
-//    val login: String? = null
-//    val avatar_url: String? = null
-//    val starred_at: String? = null
-//
-//
-//
-//}
+
 

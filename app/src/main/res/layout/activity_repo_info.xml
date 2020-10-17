@@ -4,144 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:transitionName="rere"
     tools:context=".RepoInfoActivity">
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="167dp"
-        android:layout_marginBottom="360dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.844"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
-
-    <ListView
-        android:id="@+id/listViewStargazers"
-        android:layout_width="224dp"
-        android:layout_height="78dp"
-        android:layout_margin="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="20dp"
-        android:padding="20dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="1.0">
-
-    </ListView>
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/star"
+        android:layout_marginTop="28dp"
+        android:text="@string/starChart"
         android:textColor="#944300"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/listViewStargazers"
+        app:layout_constraintBottom_toTopOf="@+id/barChart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/next"
         android:layout_width="24dp"
         android:layout_height="25dp"
-        android:layout_marginStart="184dp"
         android:background="@android:drawable/ic_media_play"
         android:onClick="nextClick"
-        app:layout_constraintBottom_toTopOf="@+id/lineChart"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/prev"
+        app:layout_constraintBottom_toTopOf="@+id/barChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.855" />
 
     <Button
         android:id="@+id/prev"
-        android:layout_width="24dp"
+        android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="84dp"
         android:background="?attr/actionModeCloseDrawable"
         android:onClick="prevClick"
-        app:layout_constraintBottom_toTopOf="@+id/lineChart"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintBottom_toTopOf="@+id/barChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.849" />
 
     <TextView
         android:id="@+id/pageNumber"
-        android:layout_width="138dp"
-        android:layout_height="28dp"
-        android:numeric="integer"
+        android:layout_width="107dp"
+        android:layout_height="30dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lineChart"
-        app:layout_constraintEnd_toStartOf="@+id/next"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toEndOf="@+id/prev"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.931" />
 
-    <ir.farshid_roohi.linegraph.LineChart
-        android:id="@+id/lineChart"
-        android:layout_width="350dp"
-        android:layout_height="318dp"
-        android:orientation="vertical"
-        android:verticalScrollbarPosition="left"
-        android:visibility="invisible"
-        app:chart_bg_color="#604B7A"
-        app:chart_line_color="#32FFFFFF"
-        app:chart_line_size="4dp"
-        app:chart_padding_bottom="50dp"
-        app:chart_padding_left="20dp"
-        app:chart_padding_right="20dp"
-        app:chart_padding_top="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintBottom_toTopOf="@+id/barChart"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/prev"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.796" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="342dp"
-        android:layout_height="181dp"
-        android:text="TextView"
-        android:textSize="10sp"
+        android:layout_width="305dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lineChart"
-        app:layout_constraintVertical_bias="0.21" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Bar Chart"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barChart" />
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"

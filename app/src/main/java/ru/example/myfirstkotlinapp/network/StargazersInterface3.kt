@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Path
 import retrofit2.http.Query
-import ru.example.myfirstkotlinapp.StargazersList2
+import ru.example.myfirstkotlinapp.model.StargazersList2
 
 interface StargazersInterface3 {
     @Headers("Accept: application/vnd.github.v3.star+json")

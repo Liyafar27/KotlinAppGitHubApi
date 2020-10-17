@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:id="@+id/gL"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
@@ -18,6 +16,7 @@
         android:layout_column="1"
         android:padding="5dp"
         android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:textSize="12sp"
         android:textStyle="bold" />
 
@@ -26,13 +25,13 @@
         android:layout_width="75dp"
         android:layout_height="65dp"
         android:layout_row="0"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:contentDescription="@android:string/ok" />
 
     <TextView
         android:id="@+id/dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         android:visibility="invisible" />
 
 

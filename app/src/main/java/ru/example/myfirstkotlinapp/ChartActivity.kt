@@ -1,19 +1,13 @@
 package ru.example.myfirstkotlinapp
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_chart.*
-import java.util.*
+import ru.example.myfirstkotlinapp.adapters.CustomRecyclerAdapter
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
-import kotlin.collections.HashSet
+
 
 class ChartActivity : AppCompatActivity() {
 
@@ -21,15 +15,15 @@ class ChartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chart)
 
-        val bundle =intent.extras
-        val listView =findViewById<ListView>(R.id.listar) as ListView
         val textView = findViewById<TextView>(R.id.textViewYear)
 
-
-
+        val bundle =intent.extras
         val bundleAr = bundle!!.getStringArrayList("listStar")
-        val currentYear=bundle!!.getString("current year")
-        textViewYear.setText("⭐Stargazers List⭐ for "+currentYear+ " year")
+        val currentYear=bundle.getString("current year")
+        val currentMonth = bundle.getString("current month")
+
+        textView.text=(getString(R.string.star)+currentMonth + " "+ currentYear )
+
         val nameAr : ArrayList<String> = ArrayList()
         val urlAr : ArrayList<String> = ArrayList()
 
@@ -42,12 +36,17 @@ class ChartActivity : AppCompatActivity() {
             val url21 =url1[0].split("avatar_url=")
             val url3 = url21[1].trim()
             urlAr.add(url3)
-             }
+         }
 
-        val chartStarsAdapter=ChartStarsAdapter(this@ChartActivity, urlAr,nameAr)
-        listView!!.adapter=chartStarsAdapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter =
+            CustomRecyclerAdapter(
+                urlAr,
+                nameAr
+            )
+
     }
-    }
+  }
 
 
 
