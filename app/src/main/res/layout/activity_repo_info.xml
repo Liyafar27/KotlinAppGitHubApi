@@ -1,88 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RepoInfoActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/starChart"
-        android:textColor="#944300"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/barChart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.58"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/next"
-        android:layout_width="24dp"
-        android:layout_height="25dp"
-        android:background="@android:drawable/ic_media_play"
-        android:onClick="nextClick"
-        app:layout_constraintBottom_toTopOf="@+id/barChart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.793"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855" />
-
-    <Button
-        android:id="@+id/prev"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="84dp"
-        android:background="?attr/actionModeCloseDrawable"
-        android:onClick="prevClick"
-        app:layout_constraintBottom_toTopOf="@+id/barChart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
-
-    <TextView
-        android:id="@+id/pageNumber"
-        android:layout_width="107dp"
-        android:layout_height="30dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-
-        app:layout_constraintBottom_toTopOf="@+id/barChart"
-        app:layout_constraintEnd_toStartOf="@+id/next"
-        app:layout_constraintHorizontal_bias="0.514"
-        app:layout_constraintStart_toEndOf="@+id/prev"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.796" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="305dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="16dp"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barChart" />
-
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/barChart"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        tools:context=".ChartActivity">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/starChart"
+            android:textColor="#944300"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/barChart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/nextRepo"
+            android:layout_width="24dp"
+            android:layout_height="25dp"
+            android:background="@android:drawable/ic_media_play"
+            app:layout_constraintBottom_toTopOf="@+id/barChart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.793"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.855" />
+
+        <Button
+            android:id="@+id/prevRepo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="84dp"
+            android:background="?attr/actionModeCloseDrawable"
+            app:layout_constraintBottom_toTopOf="@+id/barChart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.849" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/pageNumber"
+            android:layout_width="107dp"
+            android:layout_height="30dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/barChart"
+            app:layout_constraintEnd_toStartOf="@+id/nextRepo"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toEndOf="@+id/prevRepo"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.796" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="305dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barChart" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.github.mikephil.charting.charts.BarChart>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

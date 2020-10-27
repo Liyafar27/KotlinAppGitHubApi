@@ -4,8 +4,9 @@
     <string name="repoName"> Repository name </string>
     <string name="textBtnFind">Search</string>
     <string name="star"> ⭐ Stargazers List ⭐  for </string>
+    <string name="star1"> ⭐ Stargazers List ⭐  for %1$s %2$s</string>
     <string name="starChart"> ⭐ Stargazers Chart ⭐ </string>
     <string name="showChart"> Show chart </string>
-    <string name="numberPage">Page # </string>
-    <string name="yearStr">   year </string>
+    <string name="numberPage1"> Page #  %d</string>
+    <string name="yearStr1"> %d year </string>
 </resources>

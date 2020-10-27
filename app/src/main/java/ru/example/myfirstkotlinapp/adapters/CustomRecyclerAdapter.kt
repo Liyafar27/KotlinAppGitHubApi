@@ -1,4 +1,4 @@
-package ru.example.myfirstkotlinapp
+package ru.example.myfirstkotlinapp.adapters
 
 import android.net.Uri
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import ru.example.myfirstkotlinapp.R
 
 
 class CustomRecyclerAdapter( private val urlAr: ArrayList<String>, private val nameAr: ArrayList<String>) :
